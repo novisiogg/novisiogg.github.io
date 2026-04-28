@@ -16,5 +16,3 @@ Created a tracker using Claude Code, to keep track of my own [roadmap](https://g
 
 - [https://novisiogg.github.io/roadmap_tracker/](https://novisiogg.github.io/roadmap_tracker/)
 
-
-Built with help from Deepseek.
