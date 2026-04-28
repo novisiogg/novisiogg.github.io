@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+    <title>novisiogg roadmap</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="title-section">
+                <h1>ROADMAP</h1>
+                <p class="subtitle">novisiogg</p>
+            </div>
+            <div class="header-actions">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+                <div id="globalProgress" class="global-progress"></div>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <button id="toggleSearchBtn" class="search-toggle" aria-label="Toggle search">Search</button>
+            <div id="searchCollapsible" class="search-collapsible hidden">
+                <input type="text" id="searchInput" placeholder="Filter phases or tasks..." autocomplete="off">
+            </div>
+        </div>
+    </header>
+
+    <main id="phasesContainer" class="phases-grid"></main>
+
+    <footer class="app-footer">
+        <p>System ready. Keep building.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+    <script>
+        // Simple search toggle
+        const toggleBtn = document.getElementById('toggleSearchBtn');
+        const collapsible = document.getElementById('searchCollapsible');
+        if (toggleBtn && collapsible) {
+            toggleBtn.addEventListener('click', () => {
+                const isHidden = collapsible.classList.toggle('hidden');
+                if (!isHidden) document.getElementById('searchInput')?.focus();
+            });
+        }
+
+        // Dark mode toggle
+        const darkToggle = document.getElementById('darkModeToggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+
+        function setTheme(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                darkToggle.textContent = '☀️ Light';
+            } else {
+                document.body.classList.remove('dark-mode');
+                darkToggle.textContent = '🌙 Dark';
+            }
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            setTheme(true);
+        } else {
+            setTheme(false);
+        }
+
+        darkToggle.addEventListener('click', () => {
+            const isDark = document.body.classList.contains('dark-mode');
+            setTheme(!isDark);
+        });
+    </script>
+</body>
+
+</html>
