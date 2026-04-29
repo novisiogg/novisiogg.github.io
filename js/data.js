@@ -99,7 +99,26 @@ export const roadmapData = [
       "Subprocess control agent"
     ]
   },
-
+  {
+    id: 7,
+    name: "Phase 7 · Frontend Engineering for AI Interfaces",
+    color: "#38bdf8",
+    learnTasks: [
+      "HTML, CSS fundamentals",
+      "JavaScript DOM manipulation",
+      "Basic UI/UX principles",
+      "State management basics",
+      "Frontend-backend communication (APIs)",
+      "Optional: intro to React"
+    ],
+    projectTasks: [
+      "Dashboard for roadmap tracker",
+      "Chat UI for AI agent",
+      "Visualization UI (graphs, stats)",
+      "Control panel for system monitoring",
+      "Interactive tool for model outputs"
+    ]
+  },
 
   {
     id: 4,
@@ -182,26 +201,7 @@ export const roadmapData = [
       "Concurrency benchmarks"
     ]
   },
-  {
-    id: 7,
-    name: "Phase 7 · Frontend Engineering for AI Interfaces",
-    color: "#38bdf8",
-    learnTasks: [
-      "HTML, CSS fundamentals",
-      "JavaScript DOM manipulation",
-      "Basic UI/UX principles",
-      "State management basics",
-      "Frontend-backend communication (APIs)",
-      "Optional: intro to React"
-    ],
-    projectTasks: [
-      "Dashboard for your roadmap tracker",
-      "Chat UI for your AI agent",
-      "Visualization UI (graphs, stats)",
-      "Control panel for system monitoring",
-      "Interactive tool for model outputs"
-    ]
-  },
+
   {
     id: 8,
     name: "Phase 8 · Multimodal AI: Voice & Vision",
@@ -484,12 +484,12 @@ export const roadmapData = [
       "System health monitor (CPU, memory, tasks)",
       "Agent decision timeline viewer",
       "Build hallucination detector: compute similarity between answer and retrieved chunks",
-      "Implement RAGAS-like evaluation on your RAG chatbot from phase 12",
+      "Implement RAGAS-like evaluation on RAG chatbot from phase 12",
       "Prompt injection lab: try to extract system prompts, build a guardrail",
       "Create a ground truth Q&A set and run factuality benchmarks",
       "LLM-as-a-judge: compare two models on 50 prompts, measure agreement",
       "Trace viewer for agent decisions: show each step (thought → action → observation)",
-      "Instrument your RAG chatbot with OpenTelemetry, visualize in Jaeger"
+      "Instrument RAG chatbot with OpenTelemetry, visualize in Jaeger"
     ]
   },
 
@@ -546,7 +546,7 @@ export const roadmapData = [
       "Port scanner",
       "Malware analysis",
       "CTF writeups",
-      "LLM prompt injection lab: test 10 injection variants on your agent",
+      "LLM prompt injection lab: test 10 injection variants on an agent",
       "Build a simple guardrail model that detects injection attempts"
     ]
   },
