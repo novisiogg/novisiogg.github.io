@@ -37,12 +37,18 @@ export function renderPhases(container, data, tasks, search, getPhaseProgress) {
       const task = tasks[key];
       if (search && !task.text.toLowerCase().includes(search.toLowerCase())) continue;
 
+      let appliesHtml = '';
+      if (task.applies && task.applies.length) {
+        appliesHtml = `<div class="applies-badges">${task.applies.map(a => `<span class="badge">${escapeHtml(a)}</span>`).join('')}</div>`;
+      }
+
       const taskHtml = `
-                <div class="task-item ${task.checked ? 'completed' : ''}">
-                    <input type="checkbox" data-key="${key}" ${task.checked ? "checked" : ""}>
-                    <span>${escapeHtml(task.text)}</span>
-                </div>
-            `;
+    <div class="task-item ${task.checked ? 'completed' : ''}">
+      <input type="checkbox" data-key="${key}" ${task.checked ? "checked" : ""}>
+      <span>${escapeHtml(task.text)}</span>
+      ${appliesHtml}
+    </div>
+  `;
       if (task.category === "learn") {
         learnHtml += taskHtml;
       } else if (task.category === "project") {
@@ -111,7 +117,7 @@ export function bindEvents(container, onToggle, rerender) {
       const key = e.target.dataset.key;
       const checked = e.target.checked;
       onToggle(key, checked);
-      rerender(); 
+      rerender();
     }
   });
 }

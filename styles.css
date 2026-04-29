@@ -412,3 +412,33 @@ body {
         padding: 0.8rem 1rem 1.2rem;
     }
 }
+
+.task-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.55rem 0;
+    border-bottom: 0.5px solid var(--border-subtle);
+    flex-wrap: wrap;
+}
+
+.task-item span {
+    flex: 1;
+}
+
+.applies-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-left: auto;
+}
+
+.badge {
+    background: var(--gray-100);
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
