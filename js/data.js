@@ -591,9 +591,8 @@ export function buildTaskStore(data) {
     }
 
     for (let p of phase.projectTasks) {
-      // Support both string and object formats (object format includes an 'applies' array)
       const text = typeof p === 'string' ? p : p.text;
-      const applies = typeof p === 'object' && p.applies ? p.applies : null;
+      const applies = typeof p === 'object' ? p.applies : null;
       tasks[`${phase.id}_${idx++}`] = {
         text: text,
         checked: false,
