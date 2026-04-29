@@ -100,8 +100,8 @@ export const roadmapData = [
     ]
   },
   {
-    id: 7,
-    name: "Phase 7 · Frontend Engineering for AI Interfaces",
+    id: 4,
+    name: "Phase 4 · Frontend Engineering for AI Interfaces",
     color: "#38bdf8",
     learnTasks: [
       "HTML, CSS fundamentals",
@@ -121,8 +121,8 @@ export const roadmapData = [
   },
 
   {
-    id: 4,
-    name: "Phase 4 · Low‑Level Systems & Computer Architecture",
+    id: 5,
+    name: "Phase 5 · Low‑Level Systems & Computer Architecture",
     color: "#ef4444",
     learnTasks: [
       "Binary & logic gates",
@@ -155,8 +155,8 @@ export const roadmapData = [
   },
 
   {
-    id: 5,
-    name: "Phase 5 · GPU Programming & CUDA Fundamentals",
+    id: 6,
+    name: "Phase 6 · GPU Programming & CUDA Fundamentals",
     color: "#8b5cf6",
     learnTasks: [
       "GPU vs CPU architecture: cores, memory hierarchy (global, shared, registers)",
@@ -169,14 +169,14 @@ export const roadmapData = [
       "Write a simple vector addition CUDA kernel and run on free Google Colab GPU",
       "Measure occupancy: vary block size and measure kernel latency",
       "Implement matrix multiplication: naive vs shared memory vs cuBLAS",
-      "Profile the Tiny GPT training/inference from Phase 11 using Nsight",
+      "Profile the Tiny GPT training/inference from Phase 12 using Nsight",
       "Quantization benchmark: compare FP32, FP16, INT8 throughput on a GPU"
     ]
   },
 
   {
-    id: 6,
-    name: "Phase 6 · Networking Protocols & API Design",
+    id: 7,
+    name: "Phase 7 · Networking Protocols & API Design",
     color: "#f97316",
     learnTasks: [
       "HTTP & REST",
@@ -484,7 +484,7 @@ export const roadmapData = [
       "System health monitor (CPU, memory, tasks)",
       "Agent decision timeline viewer",
       "Build hallucination detector: compute similarity between answer and retrieved chunks",
-      "Implement RAGAS-like evaluation on RAG chatbot from phase 12",
+      "Implement RAGAS-like evaluation on RAG chatbot from phase 14",
       "Prompt injection lab: try to extract system prompts, build a guardrail",
       "Create a ground truth Q&A set and run factuality benchmarks",
       "LLM-as-a-judge: compare two models on 50 prompts, measure agreement",
@@ -577,7 +577,7 @@ export const roadmapData = [
   },
 
   {
-    id: 25,
+    id: 23,
     name: "Capstone",
     color: "#000000",
     learnTasks: [
@@ -589,10 +589,10 @@ export const roadmapData = [
     ],
     projectTasks: [
       "Build a RAG agent with: FastAPI, Docker, local LLM (Ollama), vector DB (Chroma)",
-      "Add monitoring: token cost, latency, hallucination score (Phase 22 style)",
+      "Add monitoring: token cost, latency, hallucination score (Phase 19 style)",
       "Add evaluation: run a test set, compute RAGAS metrics",
       "Security: prompt injection guard, API key auth, rate limiting",
-      "Frontend dashboard (Phase 6) showing agent decisions and metrics",
+      "Frontend dashboard (Phase 4) showing agent decisions and metrics",
       "Deploy on a cloud VM or free tier (Render / Fly.io), document the process"
     ]
   }
