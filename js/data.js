@@ -18,23 +18,22 @@ export const roadmapData = [
       "Cross-platform CLI compatibility"
     ],
     projectTasks: [
-      "Decorator-powered logging system",
-      "Resource tracking context manager",
-      "Fault-tolerant mini agent",
-      "Large dataset streaming pipeline",
-      "Typed FastAPI inference API",
-      "Reusable AI utility package",
-      "Test-driven evaluation suite",
-      "Performance profiler for inference",
-      "Concurrent inference server",
-      "Debuggable chatbot",
-      "Dockerized AI service",
-      "Optimized multi-stage container build",
-      "Set up GitHub Actions: lint, pytest, build Docker image on push",
-      "Pre-commit hooks: black, isort, mypy, trailing whitespace"
+      { text: "Decorator-powered logging system", applies: ["Decorators"] },
+      { text: "Resource tracking context manager", applies: ["Context managers"] },
+      { text: "Fault-tolerant mini agent", applies: ["Custom exception hierarchies & chaining"] },
+      { text: "Large dataset streaming pipeline", applies: ["Generators & iterables"] },
+      { text: "Typed FastAPI inference API", applies: ["Type hints", "Packaging", "Docker multi-stage builds"] },
+      { text: "Reusable AI utility package", applies: ["Packaging", "Type hints"] },
+      { text: "Test-driven evaluation suite", applies: ["Testing & mocking"] },
+      { text: "Performance profiler for inference", applies: ["Profiling"] },
+      { text: "Concurrent inference server", applies: ["Concurrency"] },
+      { text: "Debuggable chatbot", applies: ["Concurrency", "Testing & mocking"] },
+      { text: "Dockerized AI service", applies: ["Docker multi-stage builds", "Cross-platform CLI compatibility"] },
+      { text: "Optimized multi-stage container build", applies: ["Docker multi-stage builds"] },
+      { text: "Set up GitHub Actions: lint, pytest, build Docker image on push", applies: ["Testing & mocking", "Docker multi-stage builds"] },
+      { text: "Pre-commit hooks: black, isort, mypy, trailing whitespace", applies: ["Type hints", "Testing & mocking"] }
     ]
   },
-
   {
     id: 1,
     name: "Phase 1 · OOP Foundations & Data Persistence",
@@ -49,14 +48,13 @@ export const roadmapData = [
       "Swappable storage backends"
     ],
     projectTasks: [
-      "OOP chatbot or classifier",
-      "Persistent memory assistant",
-      "MemoryManager with multiple backends",
-      "System-aware AI agent",
-      "Selective memory reset UI"
+      { text: "OOP chatbot or classifier", applies: ["OOP design", "Agent architecture"] },
+      { text: "Persistent memory assistant", applies: ["JSON serialization/deserialization", "Memory manager pattern"] },
+      { text: "MemoryManager with multiple backends", applies: ["Memory manager pattern", "Swappable storage backends"] },
+      { text: "System-aware AI agent", applies: ["Separation of concerns", "Agent architecture"] },
+      { text: "Selective memory reset UI", applies: ["Factory reset logic", "Memory manager pattern"] }
     ]
   },
-
   {
     id: 2,
     name: "Phase 2 · Math Foundations for AI",
@@ -70,14 +68,13 @@ export const roadmapData = [
       "Loss functions and error surfaces"
     ],
     projectTasks: [
-      "Gradient descent visualizer (2D/3D)",
-      "Matrix operations from scratch (no NumPy)",
-      "Probability simulator (dice, distributions)",
-      "Implement linear regression from scratch",
-      "Visualize loss landscape for a simple model"
+      { text: "Gradient descent visualizer (2D/3D)", applies: ["Calculus", "Optimization basics"] },
+      { text: "Matrix operations from scratch (no NumPy)", applies: ["Linear algebra"] },
+      { text: "Probability simulator (dice, distributions)", applies: ["Probability basics"] },
+      { text: "Implement linear regression from scratch", applies: ["Linear algebra", "Calculus", "Loss functions"] },
+      { text: "Visualize loss landscape for a simple model", applies: ["Loss functions", "Optimization basics"] }
     ]
   },
-
   {
     id: 3,
     name: "Phase 3 · System Control & The Brain",
@@ -92,11 +89,11 @@ export const roadmapData = [
       "LLM environment management"
     ],
     projectTasks: [
-      "History-aware chatbot",
-      "Memory reset demo",
-      "Local Ollama agent API",
-      "Scoped memory notepad",
-      "Subprocess control agent"
+      { text: "History-aware chatbot", applies: ["Conversation memory loops", "Local LLM via Ollama"] },
+      { text: "Memory reset demo", applies: ["Decoupled memory systems", "Metadata isolation"] },
+      { text: "Local Ollama agent API", applies: ["Local LLM via Ollama", "LLM environment management"] },
+      { text: "Scoped memory notepad", applies: ["Metadata isolation", "Decoupled memory systems"] },
+      { text: "Subprocess control agent", applies: ["os + subprocess mastery", "Process creation"] }
     ]
   },
   {
@@ -112,14 +109,13 @@ export const roadmapData = [
       "Optional: intro to React"
     ],
     projectTasks: [
-      "Dashboard for roadmap tracker",
-      "Chat UI for AI agent",
-      "Visualization UI (graphs, stats)",
-      "Control panel for system monitoring",
-      "Interactive tool for model outputs"
+      { text: "Dashboard for roadmap tracker", applies: ["HTML, CSS fundamentals", "JavaScript DOM manipulation"] },
+      { text: "Chat UI for AI agent", applies: ["JavaScript DOM manipulation", "Frontend-backend communication (APIs)"] },
+      { text: "Visualization UI (graphs, stats)", applies: ["JavaScript DOM manipulation", "State management basics"] },
+      { text: "Control panel for system monitoring", applies: ["HTML, CSS fundamentals", "Frontend-backend communication (APIs)"] },
+      { text: "Interactive tool for model outputs", applies: ["JavaScript DOM manipulation", "State management basics"] }
     ]
   },
-
   {
     id: 5,
     name: "Phase 5 · Low‑Level Systems & Computer Architecture",
@@ -139,21 +135,20 @@ export const roadmapData = [
       "Context switching"
     ],
     projectTasks: [
-      "Logic gate simulator",
-      "Binary calculator",
-      "Cache profiler",
-      "Pipeline demo",
-      "Assembly hello world",
-      "Disassembly annotator",
-      "ELF inspector",
-      "Memory mapper",
-      "Mini shell",
-      "Syscall tracer",
-      "Resource monitor",
-      "Model quantization lab"
+      { text: "Logic gate simulator", applies: ["Binary & logic gates"] },
+      { text: "Binary calculator", applies: ["Binary & logic gates"] },
+      { text: "Cache profiler", applies: ["CPU internals & cache locality"] },
+      { text: "Pipeline demo", applies: ["Branch prediction", "CPU internals"] },
+      { text: "Assembly hello world", applies: ["x86-64 assembly"] },
+      { text: "Disassembly annotator", applies: ["Disassembly tools"] },
+      { text: "ELF inspector", applies: ["ELF format"] },
+      { text: "Memory mapper", applies: ["Virtual memory"] },
+      { text: "Mini shell", applies: ["Process management", "Context switching"] },
+      { text: "Syscall tracer", applies: ["Kernel vs user space"] },
+      { text: "Resource monitor", applies: ["Process management"] },
+      { text: "Model quantization lab", applies: ["SIMD/AVX"] }
     ]
   },
-
   {
     id: 6,
     name: "Phase 6 · GPU Programming & CUDA Fundamentals",
@@ -166,14 +161,13 @@ export const roadmapData = [
       "Profiling with nvprof / Nsight Systems"
     ],
     projectTasks: [
-      "Write a simple vector addition CUDA kernel and run on free Google Colab GPU",
-      "Measure occupancy: vary block size and measure kernel latency",
-      "Implement matrix multiplication: naive vs shared memory vs cuBLAS",
-      "Profile the Tiny GPT training/inference from Phase 12 using Nsight",
-      "Quantization benchmark: compare FP32, FP16, INT8 throughput on a GPU"
+      { text: "Write a simple vector addition CUDA kernel and run on free Google Colab GPU", applies: ["CUDA programming model"] },
+      { text: "Measure occupancy: vary block size and measure kernel latency", applies: ["Memory coalescing and occupancy"] },
+      { text: "Implement matrix multiplication: naive vs shared memory vs cuBLAS", applies: ["GPU vs CPU architecture", "CUDA programming model"] },
+      { text: "Profile the Tiny GPT training/inference from Phase 12 using Nsight", applies: ["Profiling with nvprof / Nsight Systems"] },
+      { text: "Quantization benchmark: compare FP32, FP16, INT8 throughput on a GPU", applies: ["Tensor cores and mixed precision"] }
     ]
   },
-
   {
     id: 7,
     name: "Phase 7 · Networking Protocols & API Design",
@@ -190,18 +184,17 @@ export const roadmapData = [
       "Subnetting"
     ],
     projectTasks: [
-      "HTTP client",
-      "TCP echo server",
-      "OSI visualizer",
-      "API-powered agent",
-      "Retry/backoff system",
-      "FastAPI inference API",
-      "Async scraper",
-      "Task scheduler",
-      "Concurrency benchmarks"
+      { text: "HTTP client", applies: ["HTTP & REST", "Sockets & asyncio"] },
+      { text: "TCP echo server", applies: ["TCP/UDP internals", "Sockets & asyncio"] },
+      { text: "OSI visualizer", applies: ["OSI model"] },
+      { text: "API-powered agent", applies: ["HTTP & REST", "Sockets & asyncio"] },
+      { text: "Retry/backoff system", applies: ["HTTP & REST"] },
+      { text: "FastAPI inference API", applies: ["HTTP & REST"] },
+      { text: "Async scraper", applies: ["Sockets & asyncio"] },
+      { text: "Task scheduler", applies: ["Sockets & asyncio"] },
+      { text: "Concurrency benchmarks", applies: ["Sockets & asyncio"] }
     ]
   },
-
   {
     id: 8,
     name: "Phase 8 · Multimodal AI: Voice & Vision",
@@ -215,15 +208,14 @@ export const roadmapData = [
       "OpenCV basics"
     ],
     projectTasks: [
-      "Voice assistant",
-      "Audio visualizer",
-      "Voice-controlled agent",
-      "Silence detector",
-      "Spectrogram tool",
-      "Webcam image recognizer"
+      { text: "Voice assistant", applies: ["TTS systems", "Speech-to-text"] },
+      { text: "Audio visualizer", applies: ["Audio fundamentals", "Spectrograms"] },
+      { text: "Voice-controlled agent", applies: ["Speech-to-text", "Voice activity detection"] },
+      { text: "Silence detector", applies: ["Voice activity detection"] },
+      { text: "Spectrogram tool", applies: ["Spectrograms"] },
+      { text: "Webcam image recognizer", applies: ["OpenCV basics"] }
     ]
   },
-
   {
     id: 9,
     name: "Phase 9 · Classical Machine Learning & Model Evaluation",
@@ -238,19 +230,18 @@ export const roadmapData = [
       "PCA & dimensionality reduction"
     ],
     projectTasks: [
-      "Data explorer",
-      "Dataset splitter",
-      "ML on MNIST",
-      "Confusion matrix UI",
-      "Bias detector",
-      "Neural net from scratch",
-      "Regularization playground",
-      "Experiment tracker",
-      "Model deployment",
-      "Bias dashboard"
+      { text: "Data explorer", applies: ["Feature engineering"] },
+      { text: "Dataset splitter", applies: ["Model evaluation"] },
+      { text: "ML on MNIST", applies: ["Regression & classification", "Model evaluation"] },
+      { text: "Confusion matrix UI", applies: ["Model evaluation"] },
+      { text: "Bias detector", applies: ["Bias & fairness"] },
+      { text: "Neural net from scratch", applies: ["Gradient descent"] },
+      { text: "Regularization playground", applies: ["Gradient descent", "Model evaluation"] },
+      { text: "Experiment tracker", applies: ["Model evaluation"] },
+      { text: "Model deployment", applies: ["Model evaluation"] },
+      { text: "Bias dashboard", applies: ["Bias & fairness"] }
     ]
   },
-
   {
     id: 10,
     name: "Phase 10 · Data Engineering, ETL & SQL",
@@ -264,14 +255,13 @@ export const roadmapData = [
       "Handling missing and inconsistent data"
     ],
     projectTasks: [
-      "Build ETL pipeline (raw → cleaned dataset)",
-      "Scraper + cleaner pipeline for real-world data",
-      "Dataset versioning system (simple)",
-      "SQL-backed analytics dashboard",
-      "Data validation tool that flags bad inputs"
+      { text: "Build ETL pipeline (raw → cleaned dataset)", applies: ["ETL pipelines", "Data cleaning"] },
+      { text: "Scraper + cleaner pipeline for real-world data", applies: ["ETL pipelines", "Handling missing data"] },
+      { text: "Dataset versioning system (simple)", applies: ["Data validation"] },
+      { text: "SQL-backed analytics dashboard", applies: ["SQL basics"] },
+      { text: "Data validation tool that flags bad inputs", applies: ["Data validation", "Schema design"] }
     ]
   },
-
   {
     id: 11,
     name: "Phase 11 · Experiment Tracking, Versioning & DVC",
@@ -287,16 +277,15 @@ export const roadmapData = [
       "Data pipeline reproducibility (dvc repro)"
     ],
     projectTasks: [
-      "Mini experiment tracker (log runs + metrics)",
-      "Model comparison dashboard",
-      "Dataset version control system (basic)",
-      "Hyperparameter tuning logger",
-      "Reproducible training pipeline",
-      "DVC pipeline for a dataset → preprocessing → features",
-      "Data diff visualization: compare two versions of a CSV"
+      { text: "Mini experiment tracker (log runs + metrics)", applies: ["Experiment tracking", "Hyperparameter tracking"] },
+      { text: "Model comparison dashboard", applies: ["Model versioning", "Comparison of model runs"] },
+      { text: "Dataset version control system (basic)", applies: ["Dataset versioning"] },
+      { text: "Hyperparameter tuning logger", applies: ["Hyperparameter tracking"] },
+      { text: "Reproducible training pipeline", applies: ["Reproducibility in ML"] },
+      { text: "DVC pipeline for a dataset → preprocessing → features", applies: ["Data versioning with DVC", "Data pipeline reproducibility"] },
+      { text: "Data diff visualization: compare two versions of a CSV", applies: ["Data versioning with DVC"] }
     ]
   },
-
   {
     id: 12,
     name: "Phase 12 · Transformers & Attention Mechanisms",
@@ -313,15 +302,14 @@ export const roadmapData = [
       "Quantization"
     ],
     projectTasks: [
-      "Attention implementation",
-      "Tiny GPT",
-      "Tokenizer comparison tool",
-      "Attention visualizer",
-      "LoRA fine-tuning",
-      "Quantization benchmarks"
+      { text: "Attention implementation", applies: ["Attention mechanism"] },
+      { text: "Tiny GPT", applies: ["Transformer blocks", "Autoregressive generation"] },
+      { text: "Tokenizer comparison tool", applies: ["Tokenization"] },
+      { text: "Attention visualizer", applies: ["Multi-head attention"] },
+      { text: "LoRA fine-tuning", applies: ["Fine-tuning (LoRA)"] },
+      { text: "Quantization benchmarks", applies: ["Quantization"] }
     ]
   },
-
   {
     id: 13,
     name: "Phase 13 · Prompt Engineering & Structured Generation",
@@ -335,14 +323,13 @@ export const roadmapData = [
       "Structured generation with function calling / tool use"
     ],
     projectTasks: [
-      "Compare zero-shot vs few-shot vs CoT on a reasoning task (e.g., math word problems)",
-      "Implement self-consistency: sample multiple CoT answers, pick majority",
-      "Build a prompt template manager (YAML/JSON templates, variables)",
-      "Measure token waste: reduce prompt length by 30% without accuracy loss",
-      "Structured extraction: parse unstructured text to JSON using function calling"
+      { text: "Compare zero-shot vs few-shot vs CoT on a reasoning task (e.g., math word problems)", applies: ["Zero-shot, few-shot, chain-of-thought (CoT) prompting"] },
+      { text: "Implement self-consistency: sample multiple CoT answers, pick majority", applies: ["Self-consistency and tree-of-thoughts"] },
+      { text: "Build a prompt template manager (YAML/JSON templates, variables)", applies: ["Prompt templating and versioning"] },
+      { text: "Measure token waste: reduce prompt length by 30% without accuracy loss", applies: ["Token efficiency"] },
+      { text: "Structured extraction: parse unstructured text to JSON using function calling", applies: ["Structured generation with function calling / tool use"] }
     ]
   },
-
   {
     id: 14,
     name: "Phase 14 · Retrieval‑Augmented Generation (RAG)",
@@ -352,17 +339,16 @@ export const roadmapData = [
       "Vector search",
       "RAG pipelines",
       "ANN indexing",
-      "Caching strategies",
+      "Caching strategies"
     ],
     projectTasks: [
-      "Embedding explorer",
-      "RAG chatbot",
-      "Custom vector DB",
-      "Citation accuracy test: ensure every answer segment has a source chunk",
-      "Run RAG on a QA dataset, compute answer-source intersection"
+      { text: "Embedding explorer", applies: ["Embeddings"] },
+      { text: "RAG chatbot", applies: ["RAG pipelines"] },
+      { text: "Custom vector DB", applies: ["Vector search", "ANN indexing"] },
+      { text: "Citation accuracy test: ensure every answer segment has a source chunk", applies: ["RAG pipelines"] },
+      { text: "Run RAG on a QA dataset, compute answer-source intersection", applies: ["RAG pipelines", "Evaluation"] }
     ]
   },
-
   {
     id: 15,
     name: "Phase 15 · LLM Agents & Tool Use",
@@ -375,14 +361,13 @@ export const roadmapData = [
       "State machines"
     ],
     projectTasks: [
-      "Function calling agent",
-      "ReAct system",
-      "Task planner simulator",
-      "Tool usage evaluator: track which tools the agent calls, success rate",
-      "Safety guard: reject harmful tool calls (e.g., `rm -rf /`)"
+      { text: "Function calling agent", applies: ["Tool calling"] },
+      { text: "ReAct system", applies: ["ReAct pattern"] },
+      { text: "Task planner simulator", applies: ["State machines"] },
+      { text: "Tool usage evaluator: track which tools the agent calls, success rate", applies: ["Tool calling", "Multi-agent systems"] },
+      { text: "Safety guard: reject harmful tool calls (e.g., `rm -rf /`)", applies: ["Safe execution"] }
     ]
   },
-
   {
     id: 16,
     name: "Phase 16 · Distributed Systems, MLOps & Kubernetes",
@@ -404,22 +389,21 @@ export const roadmapData = [
       "Exponential backoff with jitter"
     ],
     projectTasks: [
-      "Distributed job queue (producer + workers)",
-      "Multi-worker web scraper",
-      "Rate-limited API system with retry queue",
-      "Task scheduler with background workers",
-      "Simple load balancer simulation",
-      "Deploy a FastAPI model with BentoML, add health checks",
-      "Create GitHub Actions pipeline: lint → test → build Docker → push to registry",
-      "Run model on local K3s/Kind (single-node Kubernetes)",
-      "Model registry experiment: log different models, rollback via CLI",
-      "Simulate A/B test: compare two model versions with live traffic logging",
-      "Drift detection dashboard: show input distribution shift over time",
-      "Job queue with dead-letter queue and retry visualizer",
-      "Simulate flaky workers: show backoff and eventual success/failure"
+      { text: "Distributed job queue (producer + workers)", applies: ["Task queues", "Worker architecture"] },
+      { text: "Multi-worker web scraper", applies: ["Worker architecture", "Rate limiting"] },
+      { text: "Rate-limited API system with retry queue", applies: ["Rate limiting", "Dead-letter queues"] },
+      { text: "Task scheduler with background workers", applies: ["Task queues", "Worker architecture"] },
+      { text: "Simple load balancer simulation", applies: ["Load balancing"] },
+      { text: "Deploy a FastAPI model with BentoML, add health checks", applies: ["Model serving basics"] },
+      { text: "Create GitHub Actions pipeline: lint → test → build Docker → push to registry", applies: ["CI/CD for ML"] },
+      { text: "Run model on local K3s/Kind (single-node Kubernetes)", applies: ["Container orchestration"] },
+      { text: "Model registry experiment: log different models, rollback via CLI", applies: ["Model registries"] },
+      { text: "Simulate A/B test: compare two model versions with live traffic logging", applies: ["Canary deployments"] },
+      { text: "Drift detection dashboard: show input distribution shift over time", applies: ["Monitoring model drift"] },
+      { text: "Job queue with dead-letter queue and retry visualizer", applies: ["Dead-letter queues"] },
+      { text: "Simulate flaky workers: show backoff and eventual success/failure", applies: ["Exponential backoff with jitter"] }
     ]
   },
-
   {
     id: 17,
     name: "Phase 17 · Hardening & Secure AI Practices",
@@ -432,13 +416,12 @@ export const roadmapData = [
       "Threat modeling"
     ],
     projectTasks: [
-      "Secure AI service",
-      "Resilient API",
-      "Injection scanner",
-      "Ethics layer"
+      { text: "Secure AI service", applies: ["Docker security", "Threat modeling"] },
+      { text: "Resilient API", applies: ["Retry patterns", "Input sanitization"] },
+      { text: "Injection scanner", applies: ["Input sanitization"] },
+      { text: "Ethics layer", applies: ["Ethics"] }
     ]
   },
-
   {
     id: 18,
     name: "Phase 18 · Local LLM Deployment & Optimization",
@@ -451,13 +434,12 @@ export const roadmapData = [
       "Prompt debugging"
     ],
     projectTasks: [
-      "Local LLM UI",
-      "Fine-tuner",
-      "Prompt inspector",
-      "Model comparison tool"
+      { text: "Local LLM UI", applies: ["llama.cpp", "Streaming APIs"] },
+      { text: "Fine-tuner", applies: ["Fine-tuning"] },
+      { text: "Prompt inspector", applies: ["Prompt debugging"] },
+      { text: "Model comparison tool", applies: ["Model comparison"] }
     ]
   },
-
   {
     id: 19,
     name: "Phase 19 · Observability, Evaluation & LLM Tracing",
@@ -478,21 +460,20 @@ export const roadmapData = [
       "OpenTelemetry instrumentation for LLM apps"
     ],
     projectTasks: [
-      "Logging dashboard for AI agent actions",
-      "Latency + error tracking system",
-      "Trace visualization (request lifecycle)",
-      "System health monitor (CPU, memory, tasks)",
-      "Agent decision timeline viewer",
-      "Build hallucination detector: compute similarity between answer and retrieved chunks",
-      "Implement RAGAS-like evaluation on RAG chatbot from phase 14",
-      "Prompt injection lab: try to extract system prompts, build a guardrail",
-      "Create a ground truth Q&A set and run factuality benchmarks",
-      "LLM-as-a-judge: compare two models on 50 prompts, measure agreement",
-      "Trace viewer for agent decisions: show each step (thought → action → observation)",
-      "Instrument RAG chatbot with OpenTelemetry, visualize in Jaeger"
+      { text: "Logging dashboard for AI agent actions", applies: ["Logging strategies"] },
+      { text: "Latency + error tracking system", applies: ["Metrics collection"] },
+      { text: "Trace visualization (request lifecycle)", applies: ["Tracing and request flow"] },
+      { text: "System health monitor (CPU, memory, tasks)", applies: ["Monitoring system health"] },
+      { text: "Agent decision timeline viewer", applies: ["Tracing", "OpenTelemetry"] },
+      { text: "Build hallucination detector: compute similarity between answer and retrieved chunks", applies: ["Hallucination detection"] },
+      { text: "Implement RAGAS-like evaluation on RAG chatbot from phase 14", applies: ["RAG evaluation"] },
+      { text: "Prompt injection lab: try to extract system prompts, build a guardrail", applies: ["Prompt leakage evaluation"] },
+      { text: "Create a ground truth Q&A set and run factuality benchmarks", applies: ["Factuality metrics"] },
+      { text: "LLM-as-a-judge: compare two models on 50 prompts, measure agreement", applies: ["Human evaluation protocols"] },
+      { text: "Trace viewer for agent decisions: show each step (thought → action → observation)", applies: ["Distributed tracing"] },
+      { text: "Instrument RAG chatbot with OpenTelemetry, visualize in Jaeger", applies: ["OpenTelemetry instrumentation"] }
     ]
   },
-
   {
     id: 20,
     name: "Phase 20 · AGI Concepts & Alignment",
@@ -504,13 +485,12 @@ export const roadmapData = [
       "Alignment"
     ],
     projectTasks: [
-      "AI journal",
-      "Symbolic reasoning bot",
-      "Chinese room sim",
-      "Debate agent"
+      { text: "AI journal", applies: ["Alignment", "Hybrid AI"] },
+      { text: "Symbolic reasoning bot", applies: ["Hybrid AI"] },
+      { text: "Chinese room sim", applies: ["Chinese Room"] },
+      { text: "Debate agent", applies: ["Alignment"] }
     ]
   },
-
   {
     id: 21,
     name: "Phase 21 · Applied Security & Prompt Injection Defense",
@@ -529,28 +509,27 @@ export const roadmapData = [
       "CTF challenges"
     ],
     projectTasks: [
-      "Threat model doc",
-      "Security lab setup",
-      "AES demo",
-      "TLS inspector",
-      "Password cracker",
-      "SQL injection lab",
-      "XSS lab",
-      "Session hijack demo",
-      "Command injection scanner",
-      "Phishing analyzer",
-      "Email security tool",
-      "ROP demo",
-      "PrivEsc lab",
-      "ARP spoof tool",
-      "Port scanner",
-      "Malware analysis",
-      "CTF writeups",
-      "LLM prompt injection lab: test 10 injection variants on an agent",
-      "Build a simple guardrail model that detects injection attempts"
+      { text: "Threat model doc", applies: ["Threat modeling"] },
+      { text: "Security lab setup", applies: ["Threat modeling"] },
+      { text: "AES demo", applies: ["Encryption"] },
+      { text: "TLS inspector", applies: ["Encryption"] },
+      { text: "Password cracker", applies: ["Password hashing"] },
+      { text: "SQL injection lab", applies: ["SQL injection"] },
+      { text: "XSS lab", applies: ["XSS"] },
+      { text: "Session hijack demo", applies: ["XSS", "Buffer overflow"] },
+      { text: "Command injection scanner", applies: ["SQL injection"] },
+      { text: "Phishing analyzer", applies: ["Threat modeling"] },
+      { text: "Email security tool", applies: ["Encryption"] },
+      { text: "ROP demo", applies: ["ROP"] },
+      { text: "PrivEsc lab", applies: ["Linux privilege escalation"] },
+      { text: "ARP spoof tool", applies: ["ARP spoofing"] },
+      { text: "Port scanner", applies: ["Network security"] },
+      { text: "Malware analysis", applies: ["Malware analysis"] },
+      { text: "CTF writeups", applies: ["CTF challenges"] },
+      { text: "LLM prompt injection lab: test 10 injection variants on an agent", applies: ["Prompt injection"] },
+      { text: "Build a simple guardrail model that detects injection attempts", applies: ["Prompt injection"] }
     ]
   },
-
   {
     id: 22,
     name: "Phase 22 · Cloud Security & Infrastructure as Code",
@@ -566,16 +545,15 @@ export const roadmapData = [
       "Terraform security"
     ],
     projectTasks: [
-      "IAM escalation lab",
-      "Policy analyzer",
-      "S3 auditor",
-      "Secrets scanner",
-      "SSRF demo",
-      "CloudTrail detector",
-      "Secure Terraform baseline"
+      { text: "IAM escalation lab", applies: ["IAM policies"] },
+      { text: "Policy analyzer", applies: ["IAM policies"] },
+      { text: "S3 auditor", applies: ["S3 security"] },
+      { text: "Secrets scanner", applies: ["Secrets management"] },
+      { text: "SSRF demo", applies: ["SSRF"] },
+      { text: "CloudTrail detector", applies: ["CloudTrail"] },
+      { text: "Secure Terraform baseline", applies: ["Terraform security"] }
     ]
   },
-
   {
     id: 23,
     name: "Capstone",
@@ -588,19 +566,15 @@ export const roadmapData = [
       "Self‑hosting vs managed tradeoffs"
     ],
     projectTasks: [
-      "Build a RAG agent with: FastAPI, Docker, local LLM (Ollama), vector DB (Chroma)",
-      "Add monitoring: token cost, latency, hallucination score (Phase 19 style)",
-      "Add evaluation: run a test set, compute RAGAS metrics",
-      "Security: prompt injection guard, API key auth, rate limiting",
-      "Frontend dashboard (Phase 4) showing agent decisions and metrics",
-      "Deploy on a cloud VM or free tier (Render / Fly.io), document the process"
+      { text: "Build a RAG agent with: FastAPI, Docker, local LLM (Ollama), vector DB (Chroma)", applies: ["Review all previous phases"] },
+      { text: "Add monitoring: token cost, latency, hallucination score (Phase 19 style)", applies: ["Cost estimation", "Observability"] },
+      { text: "Add evaluation: run a test set, compute RAGAS metrics", applies: ["RAG evaluation"] },
+      { text: "Security: prompt injection guard, API key auth, rate limiting", applies: ["Security", "Rate limiting"] },
+      { text: "Frontend dashboard (Phase 4) showing agent decisions and metrics", applies: ["Frontend"] },
+      { text: "Deploy on a cloud VM or free tier (Render / Fly.io), document the process", applies: ["Self‑hosting vs managed"] }
     ]
   }
 ];
-
-
-
-
 
 export function buildTaskStore(data) {
   const tasks = {};
@@ -617,10 +591,14 @@ export function buildTaskStore(data) {
     }
 
     for (let p of phase.projectTasks) {
+      // Support both string and object formats (object format includes an 'applies' array)
+      const text = typeof p === 'string' ? p : p.text;
+      const applies = typeof p === 'object' && p.applies ? p.applies : null;
       tasks[`${phase.id}_${idx++}`] = {
-        text: p,
+        text: text,
         checked: false,
-        category: "project"
+        category: "project",
+        applies: applies
       };
     }
   }
